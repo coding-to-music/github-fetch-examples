@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 // import fetch from "node-fetch";
 
 const stars = async () => {
-  console.log("Fetching new github stargazers count…");
+  // console.log("Fetching new github stargazers count…");
 
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch("https://api.github.com/repos/11ty/eleventy")
@@ -18,7 +18,7 @@ const stars = async () => {
 };
 
 const forks = async () => {
-  console.log("Fetching new github forks count…");
+  // console.log("Fetching new github forks count…");
 
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch("https://api.github.com/repos/11ty/eleventy")
@@ -33,29 +33,14 @@ const forks = async () => {
 };
 
 async function main() {
-  // 15s
-  const ms = 1 * 1000;
-
   try {
     await stars();
-    // stop cron job
-    setTimeout(async () => {
-      console.log("------- stopped -------");
-      // await mongoose.disconnect();
-      // console.log("Disconnected from MongoDB");
-    }, ms);
   } catch (error) {
     console.error(error.message);
   }
 
   try {
     await forks();
-    // stop cron job
-    setTimeout(async () => {
-      console.log("------- stopped -------");
-      // await mongoose.disconnect();
-      // console.log("Disconnected from MongoDB");
-    }, ms);
   } catch (error) {
     console.error(error.message);
   }
