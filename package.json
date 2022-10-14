@@ -2,9 +2,13 @@
   "name": "github-fetch-examples",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.cjs",
+  "cacheDirectories": [
+    "node_modules"
+  ],
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.cjs",
     "badinstall": "npm install",
     "deploy": "git add . && git commit -m Build && git push"
   },
@@ -15,11 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@octokit/core": "^3.5.1",
-    "dayjs": "^1.10.7",
-    "dotenv": "^10.0.0",
-    "mongoose": "^6.1.2",
-    "node-fetch": "^3.2.10"
+    "node-fetch": "^2.6.7"
   },
   "engines": {
     "node": "16.x"
