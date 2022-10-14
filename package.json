@@ -1,0 +1,26 @@
+{
+  "name": "github-fetch-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "badinstall": "npm install",
+    "deploy": "git add . && git commit -m Build && git push"
+  },
+  "keywords": [
+    "github-insights",
+    "github-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/core": "^3.5.1",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.1.2"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
