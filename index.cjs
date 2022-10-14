@@ -62,17 +62,18 @@ async function main() {
   } catch (error) {
     console.error(error.message);
   }
-}
 
-try {
-  await views();
-} catch (error) {
-  console.error(error.message);
-}
-try {
-  await clones();
-} catch (error) {
-  console.error(error.message);
+  try {
+    await views();
+  } catch (error) {
+    console.error(error.message);
+  }
+
+  try {
+    await clones();
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
 main();
