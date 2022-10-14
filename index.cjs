@@ -31,7 +31,7 @@ const views = async () => {
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
       // prune the data to return only what we want
-      console.log("Stars: ", json.views_count);
+      console.log("Views: ", json.views);
       return {
         views: json.views_count,
       };
@@ -43,7 +43,24 @@ const clones = async () => {
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
       // prune the data to return only what we want
-      console.log("Clones: ", json.clones_count);
+      console.log("Clones: ", json.clones);
+      console.log("Private: ", json.private);
+      console.log("html_url: ", json.html_url);
+      console.log("description: ", json.description);
+      console.log("name: ", json.name);
+      console.log("full_name: ", json.full_name);
+      console.log("created_at: ", json.created_at);
+      console.log("updated_at: ", json.updated_at);
+      console.log("homepage: ", json.homepage);
+      console.log("size: ", json.size);
+      console.log("stargazers_count: ", json.stargazers_count);
+      console.log("Watchers: ", json.watchers);
+      console.log("topics: ", json.topics);
+      console.log("forks_count: ", json.forks_count);
+      console.log("forks: ", json.forks);
+      console.log("visibility: ", json.visibility);
+      console.log("open_issues: ", json.open_issues);
+
       return {
         clones: json.clones_count,
       };
