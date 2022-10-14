@@ -1,6 +1,6 @@
 # github-fetch-examples
 
-# 🚀 Fetch attributes of a repo from GitHub 🚀
+# 🚀 Fetch attributes of a repo from the GitHub API 🚀
 
 https://github.com/coding-to-music/github-fetch-examples
 
