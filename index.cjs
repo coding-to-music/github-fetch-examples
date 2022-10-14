@@ -3,9 +3,6 @@ const fetch = require("node-fetch");
 // import fetch from "node-fetch";
 
 const stars = async () => {
-  // console.log("Fetching new github stargazers count…");
-
-  // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch("https://api.github.com/repos/11ty/eleventy")
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
@@ -18,9 +15,6 @@ const stars = async () => {
 };
 
 const forks = async () => {
-  // console.log("Fetching new github forks count…");
-
-  // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch("https://api.github.com/repos/11ty/eleventy")
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
@@ -28,6 +22,30 @@ const forks = async () => {
       console.log("Forks: ", json.forks_count);
       return {
         forks: json.forks_count,
+      };
+    });
+};
+
+const views = async () => {
+  return fetch("https://api.github.com/repos/11ty/eleventy")
+    .then((res) => res.json()) // node-fetch option to transform to json
+    .then((json) => {
+      // prune the data to return only what we want
+      console.log("Stars: ", json.views_count);
+      return {
+        views: json.views_count,
+      };
+    });
+};
+
+const clones = async () => {
+  return fetch("https://api.github.com/repos/11ty/eleventy")
+    .then((res) => res.json()) // node-fetch option to transform to json
+    .then((json) => {
+      // prune the data to return only what we want
+      console.log("Clones: ", json.clones_count);
+      return {
+        clones: json.clones_count,
       };
     });
 };
@@ -44,6 +62,17 @@ async function main() {
   } catch (error) {
     console.error(error.message);
   }
+}
+
+try {
+  await views();
+} catch (error) {
+  console.error(error.message);
+}
+try {
+  await clones();
+} catch (error) {
+  console.error(error.message);
 }
 
 main();
