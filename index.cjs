@@ -43,11 +43,13 @@ const clones = async () => {
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
       // prune the data to return only what we want
+      console.log("Clones: ", json.clones);
+      console.log("Views: ", json.views);
+      console.log("Committers: ", json.committers);
+      console.log("Commits: ", json.commits);
       console.log("stargazers_count: ", json.stargazers_count);
       console.log("forks_count: ", json.forks_count);
       console.log("forks: ", json.forks);
-      console.log("Clones: ", json.clones);
-      console.log("Views: ", json.views);
       console.log("Private: ", json.private);
       console.log("visibility: ", json.visibility);
       console.log("html_url: ", json.html_url);
@@ -61,8 +63,6 @@ const clones = async () => {
       console.log("Watchers: ", json.watchers);
       console.log("topics: ", json.topics);
       console.log("open_issues: ", json.open_issues);
-      console.log("Committers: ", json.committers);
-      console.log("Commits: ", json.commits);
 
       return {
         clones: json.clones_count,
