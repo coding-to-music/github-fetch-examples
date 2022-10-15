@@ -6,6 +6,8 @@ https://github.com/coding-to-music/github-fetch-examples
 
 From / By https://www.11ty.dev/docs/quicktips/eliminate-js/
 
+https://github.com/imranpollob/github-total-star-counter
+
 ## Environment variables:
 
 ```java
@@ -22,6 +24,52 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:coding-to-music/github-fetch-examples.git
 git push -u origin main
+```
+
+# Github Total Star Counter
+
+Find out the total star earned by a github user.
+
+## Usage
+
+Clone the repository:
+
+```bash
+git clone https://github.com/pollmix/github-total-star-counter
+cd github-total-star-counter
+```
+
+Run the following command:
+
+```bash
+python star.py theusername
+```
+
+You can also add the print limit. For example, printing only top fifteen repos
+
+```bash
+python star.py theusername 15
+```
+
+Output
+
+```
+Total ⭐️ 13
+https://github.com/coding-to-music/nestjs-prisma-multi-database------------------------------------------------ ⭐️ 3
+https://github.com/coding-to-music/battlecode2021-------------------------------------------------------------- ⭐️ 1
+https://github.com/coding-to-music/chalice-workshop------------------------------------------------------------ ⭐️ 1
+https://github.com/coding-to-music/docker-flask-mongodb-k8-grafana-mqtt-fastapi-------------------------------- ⭐️ 1
+https://github.com/coding-to-music/facebook-firebase-next-chat------------------------------------------------- ⭐️ 1
+https://github.com/coding-to-music/grafana-nginx-prometheus-postgres-node-exporter-jmx-cadvisor---------------- ⭐️ 1
+https://github.com/coding-to-music/k6-influxdb-grafana-docker-load-testing------------------------------------- ⭐️ 1
+https://github.com/coding-to-music/mongoose-mongodb-upload-images---------------------------------------------- ⭐️ 1
+https://github.com/coding-to-music/nuxt-supabase-full-multi-user-blog------------------------------------------ ⭐️ 1
+https://github.com/coding-to-music/postgres-postgrest-cloudflare-docker---------------------------------------- ⭐️ 1
+https://github.com/coding-to-music/tempo-otel-open-telemetry-loki-prometheus-grafana--------------------------- ⭐️ 1
+https://github.com/coding-to-music/1001devs-client------------------------------------------------------------- ⭐️ 0
+https://github.com/coding-to-music/24ways-datasette------------------------------------------------------------ ⭐️ 0
+https://github.com/coding-to-music/60sk3s---------------------------------------------------------------------- ⭐️ 0
+https://github.com/coding-to-music/a-kafka-story-zookeeper-java-telegraf-jmx-grafana-ksql---------------------- ⭐️ 0
 ```
 
 # GET THE STARGAZERS COUNT FROM THE GITHUB API
