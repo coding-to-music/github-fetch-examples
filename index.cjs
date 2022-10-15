@@ -43,8 +43,13 @@ const clones = async () => {
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
       // prune the data to return only what we want
+      console.log("stargazers_count: ", json.stargazers_count);
+      console.log("forks_count: ", json.forks_count);
+      console.log("forks: ", json.forks);
       console.log("Clones: ", json.clones);
+      console.log("Views: ", json.views);
       console.log("Private: ", json.private);
+      console.log("visibility: ", json.visibility);
       console.log("html_url: ", json.html_url);
       console.log("description: ", json.description);
       console.log("name: ", json.name);
@@ -53,13 +58,11 @@ const clones = async () => {
       console.log("updated_at: ", json.updated_at);
       console.log("homepage: ", json.homepage);
       console.log("size: ", json.size);
-      console.log("stargazers_count: ", json.stargazers_count);
       console.log("Watchers: ", json.watchers);
       console.log("topics: ", json.topics);
-      console.log("forks_count: ", json.forks_count);
-      console.log("forks: ", json.forks);
-      console.log("visibility: ", json.visibility);
       console.log("open_issues: ", json.open_issues);
+      console.log("Committers: ", json.committers);
+      console.log("Commits: ", json.commits);
 
       return {
         clones: json.clones_count,
@@ -68,23 +71,23 @@ const clones = async () => {
 };
 
 async function main() {
-  try {
-    await stars();
-  } catch (error) {
-    console.error(error.message);
-  }
+  // try {
+  //   await stars();
+  // } catch (error) {
+  //   console.error(error.message);
+  // }
 
-  try {
-    await forks();
-  } catch (error) {
-    console.error(error.message);
-  }
+  // try {
+  //   await forks();
+  // } catch (error) {
+  //   console.error(error.message);
+  // }
 
-  try {
-    await views();
-  } catch (error) {
-    console.error(error.message);
-  }
+  // try {
+  //   await views();
+  // } catch (error) {
+  //   console.error(error.message);
+  // }
 
   try {
     await clones();
