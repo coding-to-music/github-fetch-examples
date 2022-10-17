@@ -54,6 +54,9 @@ const clones = async () => {
       console.log("open_issues: ", json.open_issues);
       console.log("stargazers_count: ", json.stargazers_count);
       console.log("forks_count: ", json.forks_count);
+      console.log("size: ", json.size);
+      console.log("created_at: ", json.created_at);
+      console.log("updated_at: ", json.updated_at);
 
       console.log("");
       console.log("");
@@ -66,9 +69,6 @@ const clones = async () => {
       console.log("clone_url: ", json.clone_url);
       console.log("forks: ", json.forks);
       console.log("full_name: ", json.full_name);
-      console.log("created_at: ", json.created_at);
-      console.log("updated_at: ", json.updated_at);
-      console.log("size: ", json.size);
       console.log("Watchers: ", json.watchers);
 
       return {
