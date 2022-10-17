@@ -43,27 +43,33 @@ const clones = async () => {
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
       // prune the data to return only what we want
+      console.log("name: ", json.name);
+      console.log("description: ", json.description);
+      // #     preview: require('./showcase/pokedex.png'),
+      console.log("homepage: ", json.homepage);
+      console.log("html_url: ", json.html_url);
+      console.log("topics: ", json.topics);
+      console.log("private: ", json.private);
+      console.log("visibility: ", json.visibility);
+      console.log("open_issues: ", json.open_issues);
+      console.log("stargazers_count: ", json.stargazers_count);
+      console.log("forks_count: ", json.forks_count);
+
+      console.log("");
+      console.log("");
+      console.log("");
+      // prune the data to return only what we want
       console.log("Clones: ", json.clones);
       console.log("Views: ", json.views);
       console.log("Committers: ", json.committers);
       console.log("Commits: ", json.commits);
       console.log("clone_url: ", json.clone_url);
-      console.log("stargazers_count: ", json.stargazers_count);
-      console.log("forks_count: ", json.forks_count);
       console.log("forks: ", json.forks);
-      console.log("Private: ", json.private);
-      console.log("visibility: ", json.visibility);
-      console.log("html_url: ", json.html_url);
-      console.log("description: ", json.description);
-      console.log("name: ", json.name);
       console.log("full_name: ", json.full_name);
       console.log("created_at: ", json.created_at);
       console.log("updated_at: ", json.updated_at);
-      console.log("homepage: ", json.homepage);
       console.log("size: ", json.size);
       console.log("Watchers: ", json.watchers);
-      console.log("topics: ", json.topics);
-      console.log("open_issues: ", json.open_issues);
 
       return {
         clones: json.clones_count,
